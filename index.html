@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Only For My Bestie 💗</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#ffe0ec,#ffc1d8,#f9a8d4);
+  color: #a61d59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Cute Decorations */
+
+.decor {
+  position: fixed;
+  pointer-events: none;
+  animation: float 5s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+.d1 {top:5%;left:5%;font-size:45px;}
+.d2 {top:12%;right:7%;font-size:40px;animation-delay:1s;}
+.d3 {bottom:8%;left:8%;font-size:45px;animation-delay:2s;}
+.d4 {bottom:10%;right:6%;font-size:48px;animation-delay:.5s;}
+.d5 {top:48%;left:3%;font-size:30px;}
+.d6 {top:55%;right:4%;font-size:35px;}
+
+/* Main Card */
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 30px 22px;
+  text-align: center;
+  background: rgba(255,255,255,.88);
+  border: 3px solid white;
+  border-radius: 30px;
+  box-shadow: 0 15px 50px #b82b6840;
+  position: relative;
+  z-index: 2;
+  animation: enter 1s ease;
+}
+
+@keyframes enter {
+  from {
+    opacity:0;
+    transform:translateY(30px) scale(.95);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+h1 {
+  color: #d63379;
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #8d315a;
+}
+
+button {
+  border: none;
+  background: linear-gradient(135deg,#ff4389,#e91e63);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 24px;
+  cursor: pointer;
+  box-shadow: 0 7px 20px #e91e6350;
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.07);
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.hidden {
+  display: none;
+}
+
+.ribbon {
+  font-size: 36px;
+  margin: 12px;
+}
+
+/* Photo */
+
+.photo {
+  width: 190px;
+  height: 220px;
+  object-fit: cover;
+  border: 6px solid white;
+  border-radius: 25px;
+  box-shadow: 0 5px 25px #ec4899;
+  margin: 20px auto;
+}
+
+/* Message Box */
+
+.message {
+  background: #fff0f6;
+  border: 2px dashed #ff80ab;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* Chocolates */
+
+.choco {
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin: 15px 0;
+}
+
+/* Floating Hearts */
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  animation: rise 6s linear forwards;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.fade {
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity:0;
+    transform:translateY(15px);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.footer {
+  font-size: 13px;
+  color: #c05b86;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Decorations -->
+
+<div class="decor d1">🧸</div>
+<div class="decor d2">🍫</div>
+<div class="decor d3">🎀</div>
+<div class="decor d4">🧸</div>
+<div class="decor d5">💗</div>
+<div class="decor d6">🍬</div>
+
+<div class="card">
+
+  <!-- PAGE 1 -->
+
+  <div id="page1">
+
+    <div class="ribbon">🎁💝🎀</div>
+
+    <h1>Hey Meri Favourite Bestie! 🥺</h1>
+
+    <p>
+      Tumhare liye kuch chhota sa banaya hai...
+      <br><br>
+      Lekin is gift ko kholne se pehle
+      ek promise karna...
+      <br><br>
+      End tak zaroor dekhna. 🙈💗
+    </p>
+
+    <div class="choco">🍫 🍬 🍫</div>
+
+    <button onclick="next(2)">
+      Open Your Surprise 🎁
+    </button>
+
+    <div class="footer">
+      Made with lots of friendship and love 💗
+    </div>
+
+  </div>
+
+  <!-- PAGE 2 -->
+
+  <div id="page2" class="hidden">
+
+    <div class="ribbon">🧸🌷💗</div>
+
+    <h1>Ek Baat Bataun? 🙈</h1>
+
+    <p>
+      Pata hai, tumse baat karna
+      mere din ka sabse pyara hissa hai.
+      <br><br>
+      Kabhi-kabhi bina kisi wajah ke
+      bhi tumhari yaad aa jaati hai.
+      <br><br>
+      Aur phir apne aap smile aa jaati hai. 🥹
+      <br><br>
+      Tumhari pagalpan wali baatein bhi
+      bahut yaad aati hain. 😂❤️
+    </p>
+
+    <button onclick="next(3)">
+      Aage Bhi Suno ❤️
+    </button>
+
+  </div>
+
+  <!-- PAGE 3 -->
+
+  <div id="page3" class="hidden">
+
+    <div class="ribbon">🌙💌🌹</div>
+
+    <h1>Subah Se Raat Tak... ❤️</h1>
+
+    <p>
+      Subah aankh khulte hi tumhara khayal aata hai.
+      <br><br>
+      Din bhar kuch bhi kar raha hoon,
+      beech-beech mein tum yaad aati ho.
+      <br><br>
+      Koi funny baat hoti hai toh
+      sabse pehle tumhe batane ka mann karta hai.
+      <br><br>
+      Raat ko sone se pehle bhi
+      tumhari yaad aa hi jaati hai.
+      <br><br>
+      Sach mein, tum meri life ka
+      sabse special friendship wala part ho. 🥺💗
+    </p>
+
+    <button onclick="next(4)">
+      Ek Last Surprise 🎀
+    </button>
+
+  </div>
+
+  <!-- PAGE 4 -->
+
+  <div id="page4" class="hidden">
+
+    <div class="ribbon">🎀🧸🍫🌹</div>
+
+    <h1>Just For You, Bestie! 💗</h1>
+
+    <!-- YOUR PHOTO -->
+    <!-- Save photo as myphoto.jpg -->
+
+    <img
+      src="myphoto.jpg"
+      class="photo"
+      alt="Our Special Memory"
+    >
+
+    <div class="message">
+
+      <p>
+        Main tumhe har din batana chahta hoon
+        ki tum mere liye kitni special ho.
+        <br><br>
+
+        Tumhari smile, tumhari bakbak,
+        tumhara pagalpan...
+        sab kuch bahut precious hai.
+        <br><br>
+
+        <b>
+          Please kabhi mujhse door mat jaana. 🥺❤️
+        </b>
+
+        <br><br>
+
+        Subah uthne se lekar raat ko sone tak,
+        din mein kitni bhi busy rahun,
+        tumhara khayal aa hi jaata hai.
+        <br><br>
+
+        Tumhari hasi aur tumhari chhoti-chhoti
+        baatein mere din ka sabse special part hain.
+        <br><br>
+
+        Chahe hum kitna bhi ladein,
+        bas hamari friendship kabhi khatam
+        mat hone dena.
+        <br><br>
+
+        <b>
+          Tu sirf meri bestie nahi,
+          meri life ka ek bahut precious part hai. 🧸💗
+        </b>
+
+        <br><br>
+
+        Love you meri pagal bestie! 🫂🌷
+      </p>
+
+    </div>
+
+    <div class="choco">
+      🍫🍬🍫🍬🍫
+    </div>
+
+    <h1 style="margin-top:20px;">
+      Ek Chhoti Si Wish Hai Meri... 🥺❤️
+    </h1>
+
+    <p>
+      Bas tum hamesha mere saath rehna.
+      <br><br>
+      Har khushi mein, har mushkil mein,
+      aur zindagi ke har chhote-bade pal mein.
+      <br><br>
+      Please kabhi mujhse door mat jaana.
+      <br><br>
+      Tum mere liye bahut special ho. 🫂💗
+    </p>
+
+    <button onclick="yes()">
+      Hamesha Aise Hi Best Friends! 🫂
+    </button>
+
+    <p
+      id="answer"
+      style="margin-top:20px;font-weight:bold;"
+    ></p>
+
+    <div class="footer">
+      Best Friends Forever ♾️💗
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function next(n) {
+
+  for(let i=1;i<=4;i++) {
+    document.getElementById("page"+i)
+    .classList.add("hidden");
+  }
+
+  let page = document.getElementById("page"+n);
+
+  page.classList.remove("hidden");
+  page.classList.add("fade");
+
+  if(n===4) {
+    hearts();
+  }
+}
+
+function hearts() {
+
+  for(let i=0;i<45;i++) {
+
+    let h = document.createElement("div");
+
+    h.className = "heart";
+
+    h.innerHTML = [
+      "❤️","💗","💕","💖","🌹","✨","🧸"
+    ][Math.floor(Math.random()*7)];
+
+    h.style.left = Math.random()*100+"vw";
+
+    h.style.fontSize =
+      (20+Math.random()*25)+"px";
+
+    h.style.animationDuration =
+      (3+Math.random()*5)+"s";
+
+    document.body.appendChild(h);
+
+    setTimeout(()=>{
+      h.remove();
+    },8000);
+  }
+}
+
+function yes() {
+
+  document.getElementById("answer").innerHTML =
+  "Awww! 🥹❤️ Bas aise hi hamesha mere saath rehna. Tu meri favourite bestie hai, meri sabse pyari friendship wali feeling hai. Let's make countless beautiful memories together! 🧸💗🌹";
+
+  hearts();
+}
+
+</script>
+
+</body>
+</html>
